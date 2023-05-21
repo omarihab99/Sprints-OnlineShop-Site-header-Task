@@ -40,7 +40,7 @@ ul {
 .lang-container {
   position: relative;
   background-color: #ffffff;
-  
+
   margin-bottom: 2%;
 }
 .account-container:hover,
@@ -327,11 +327,25 @@ input:focus .search-icon {
   margin-right: 5%;
   margin-top: 2%;
 }
-
+@keyframes fashion-animation {
+  0% {
+    background-image: url(./img/carousel-1.jpg);
+  }
+  50% {
+    background-image: url(./img/carousel-2.jpg);
+  }
+  100% {
+    background-image: url(./img/carousel-3.jpg);
+  }
+}
 .fashion-container {
   background-image: url(./img/carousel-1.jpg);
   opacity: 1;
   grid-row: 1 / span 10;
+  animation-name: fashion-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
 }
 .background {
   background: rgba(61, 70, 77, 0.5);
@@ -435,7 +449,6 @@ input:focus .search-icon {
     color: #3c444c;
   }
 
-
   .info-counter-container span {
     color: #3c444c;
     border-color: #3c444c;
@@ -476,15 +489,16 @@ input:focus .search-icon {
     justify-content: center;
     align-items: center;
   }
-  .special-offer1-container, .special-offer2-container {
+  .special-offer1-container,
+  .special-offer2-container {
     width: 340px;
     background-size: 336px 200px;
   }
- .offers{
-  margin-left: -30px;
-  margin-right: -30px;
-  width: 340px;
- }
+  .offers {
+    margin-left: -30px;
+    margin-right: -30px;
+    width: 340px;
+  }
   .features-container {
     grid-template-columns: 1fr;
   }
